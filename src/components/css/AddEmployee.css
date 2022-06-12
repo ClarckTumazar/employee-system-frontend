@@ -1,0 +1,71 @@
+.Navbar {
+  text-align: center;
+  background-color: rgb(57, 57, 57);
+  display: flex;
+  align-items: center;
+
+} p {
+  color: white;
+  padding-left: 8px;
+  font-weight: bold;
+
+} .AddEmployeeForm {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding: 20px;
+  margin: auto;
+  margin-top: 15px;
+  font-family: Inter light;
+  border-bottom: 1px gray solid;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+} header {
+  padding-bottom: 15px;
+  font-weight: 50;
+
+} .input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 15px 15px 0;
+  font-size: small;
+
+} input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: Google sans;
+  background-color: antiquewhite;
+
+} label {
+  font-size: 12px;
+  font-weight: bold;
+
+} button {
+  cursor: pointer;
+  width: fit-content;
+  margin-inline-end: 10px;
+  padding: 10px 25px 10px 25px;
+  border: none;
+  outline: none;
+  font-size: 10px;
+  font-family: Google sans;
+  border-radius: 5px;
+
+} .submit-button {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(59, 234, 59);
+
+} .submit-button:hover {
+  background-color: rgb(55, 161, 55);
+
+} .cancel-button {
+  font-weight: bold;
+
+} .cancel-button:hover {
+  background-color: lightgray;
+}

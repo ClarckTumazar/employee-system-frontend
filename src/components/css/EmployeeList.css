@@ -1,0 +1,11 @@
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding: 20px;
+  margin: auto;
+  margin-top: 15px;
+  font-family: Inter light;
+  border-bottom: 1px gray solid;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
