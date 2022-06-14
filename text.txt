@@ -1,0 +1,86 @@
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+const UpdateEmployee = () => {
+
+  const navigate = useNavigate();
+  const [employee, setEmployee] = useState({
+    id: "",
+    firstName: "",
+    lastName: "",
+    emailId: ""
+  })
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setEmployee({...employee, [e.target.name]: value});
+  };
+
+
+  const updateEmployee = (e) => {
+    e.preventDefault();
+  }
+
+  const clearForm = (e) => {
+    e.preventDefault()
+    setEmployee({
+      id: "",
+      firstName: "",
+      lastName: "",
+      emailId: ""
+    })
+  };
+
+  return (
+    <form className="AddEmployeeForm">
+      <header>
+        Update Employee
+      </header>
+
+      <div className="input-group">
+        <label>First Name</label>
+        <input 
+          type="text" 
+          name="firstName" 
+          value={employee.firstName}
+          required
+          onChange={(e) => handleChange(e)} 
+        />
+      </div>
+
+      <div className="input-group">
+        <label>Last Name</label>
+          <input 
+            type="text" 
+            name="lastName" 
+            value = {employee.lastName} 
+            onChange={(e) => handleChange(e)} 
+          />
+      </div>
+
+      <div className="input-group">
+        <label>Email</label>
+          <input 
+            type="text" 
+            name="emailId" 
+            value = {employee.emailId} 
+            onChange={(e) => handleChange(e)} 
+          />
+      </div>
+
+      <div className="button-group">
+        <button 
+          className="submit-button"
+          onClick={(e) => updateEmployee(e)}
+          > Update </button>
+        <button 
+          className="cancel-button"
+          onClick={(e) => clearForm(e)}
+          > Cancel </button>
+      </div>
+
+    </form>
+  )
+}
+
+export default UpdateEmployee();

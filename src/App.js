@@ -1,9 +1,11 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import AddEmployee from './components/AddEmployee';
 import './components/css/AddEmployee.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './components/css/EmployeeList.css'
+import AddEmployee from './components/AddEmployee';
 import EmployeeList from './components/EmployeeList';
+import UpdateEmployee from './components/UpdateEmployee';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <Route path='/' element={<EmployeeList />} />
       <Route path='/employeeList' element={<EmployeeList />} />
       <Route path='/addEmployee' element={<AddEmployee />} />
-    </Routes>
+      <Route path='/updateEmployee/:id' element={<UpdateEmployee />} />
+</Routes>
   </BrowserRouter>
   </>
   );
